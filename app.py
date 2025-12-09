@@ -12,7 +12,7 @@ import plotly.graph_objects as go
 USERS = {
     "admin": "admin123",
     "gerente": "gerente123",
-    "analista": "analista123"
+    "analista": "analista1234"
 }
 
 # Inicializar estado de login
