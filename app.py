@@ -10,11 +10,7 @@ import numpy as np
 # ============================================
 
 # Usuários e senhas (para produção, use secrets.toml ou banco de dados)
-USERS = {
-    "admin": "admin123",
-    "gerente": "gerente123",
-    "analista": "analista123"
-}
+USERS = st.secrets["users"]
 
 # Inicializar estado de login
 if "logged_in" not in st.session_state:
