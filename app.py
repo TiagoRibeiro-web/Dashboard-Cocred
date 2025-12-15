@@ -133,7 +133,7 @@ def show_login():
     # Container de login
     st.markdown("""
     <div class="login-container">
-        <div class="sicredi-logo">🌾</div>
+        <div class="sicredi-logo"></div>
         <h1 class="login-title">Cocred Dashboard</h1>
         <p class="login-subtitle">
             Plataforma de Análise de Campanhas e Investimentos
