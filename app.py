@@ -165,7 +165,7 @@ def show_login():
     st.markdown("---")
     st.markdown(
         "<div style='text-align: center; color: #777; font-size: 0.9rem; padding: 20px;'>"
-        "© 2025 Cocred Cooperativa - Todos os direitos reservados<br>"
+        "© 2026 Cocred Cooperativa - Todos os direitos reservados<br>"
         "Sistema de Dashboard para Análise de Campanhas<br>"
         "Acesso restrito a pessoal autorizado"
         "</div>",
@@ -1707,6 +1707,6 @@ st.markdown(f"""
 <div style="text-align: center; color: {COCRED_COLORS['cinza_medio']}; font-size: 0.9rem; padding: 20px;">
     <p> <strong style="color: {COCRED_COLORS['verde_escuro']};">COCRED Dashboard</strong> - Plataforma de Análise de Campanhas</p>
     <p>👤 Usuário: {st.session_state['username'].capitalize()} | 📅 Última atualização: {pd.Timestamp.now().strftime('%d/%m/%Y %H:%M')}</p>
-    <p style="font-size: 0.8rem;">© 2025 Ideatore Americas - Todos os direitos reservados</p>
+    <p style="font-size: 0.8rem;">© 2026 Ideatore Americas - Todos os direitos reservados</p>
 </div>
 """, unsafe_allow_html=True)
