@@ -120,7 +120,25 @@ def show_login():
             font-size: 16px; /* tamanho de fonte adequado */
             line-height: 1.5;
         }
-        
+            /* Garantir que COCRED Dashboard seja visível no tema dark */
+    .dashboard-title-dark {
+        color: white !important;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.5) !important;
+    }
+    
+    /* Título na sidebar com destaque no dark mode */
+    [data-testid="stSidebar"] h3 {
+        color: white !important;
+        font-weight: 700 !important;
+        font-size: 24px !important;
+        text-align: center !important;
+        margin-bottom: 20px !important;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.5) !important;
+        background: linear-gradient(90deg, #C9D200, #00AE9D) !important;
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+        background-clip: text !important;
+    }
         
         
     </style>
@@ -130,10 +148,34 @@ def show_login():
     st.markdown("""
     <div class="login-container">
         <div class="sicredi-logo"></div>
-        <h1 class="login-title">COCRED Dashboard</h1>
-        <p class="login-subtitle">
-            Plataforma de Análise de Campanhas e Investimentos
-        </p>
+        <div style="text-align: center; margin-bottom: 40px;">
+            <h1 style="
+                color: #003641;
+                font-size: 38px;
+                font-weight: 700;
+                margin: 0;
+                padding: 18px 25px;
+                letter-spacing: 1px;
+                border: 2px solid #00AE9D;
+                border-radius: 10px;
+                background: rgba(255, 255, 255, 0.95);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                display: inline-block;
+                font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+            ">
+                COCRED Dashboard
+            </h1>
+            <p style="
+                color: #666666;
+                font-size: 16px;
+                margin-top: 20px;
+                margin-bottom: 0;
+                font-weight: 400;
+                font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+            ">
+                Plataforma de Análise de Campanhas e Investimentos
+            </p>
+        </div>
     </div>
     """, unsafe_allow_html=True)
     
@@ -182,6 +224,58 @@ if not st.session_state["logged_in"]:
 # ============================================
 # SE CHEGOU AQUI, USUÁRIO ESTÁ LOGADO
 # ============================================
+
+# ============================================
+# DADOS DAS CAMPANHAS (MOVIDO PARA CIMA - ANTES DA SIDEBAR)
+# ============================================
+data = [
+    # campanha_investimentos_2025
+    {"campanha": "campanha_investimentos_2025", "canal": "Rádio", "Investimento": 130279.37, "porcentagem_investimento": 0.15054568046381514, "impactos": 5270645, "porcentagem_impactos": 0.11331211653406507, "cpm": 24.71791782599663},
+    {"campanha": "campanha_investimentos_2025", "canal": "Painel de LED", "Investimento": 6117.2, "porcentagem_investimento": 0.007068794057979019, "impactos": 56398, "porcentagem_impactos": 0.0012124847619766085, "cpm": 108.46483917869428},
+    {"campanha": "campanha_investimentos_2025", "canal": "Revista", "Investimento": 7500, "porcentagem_investimento": 0.008666702974374328, "impactos": 125000, "porcentagem_impactos": 0.0026873398923202255, "cpm": 60},
+    {"campanha": "campanha_investimentos_2025", "canal": "TV", "Investimento": 580123.84, "porcentagem_investimento": 0.6703681346177942, "impactos": 33760901, "porcentagem_impactos": 0.7258161284637903, "cpm": 17.183304438468628},
+    {"campanha": "campanha_investimentos_2025", "canal": "Meta Ads", "Investimento": 10936.25, "porcentagem_investimento": 0.0126374973871335, "impactos": 5410725, "porcentagem_impactos": 0.11632365711099481, "cpm": 2.021217119702073},
+    {"campanha": "campanha_investimentos_2025", "canal": "Google Ads", "Investimento": 4932.36, "porcentagem_investimento": 0.005699639877691328, "impactos": 618880, "porcentagem_impactos": 0.013305127300473129, "cpm": 7.969816442605998},
+    {"campanha": "campanha_investimentos_2025", "canal": "Linkedin", "Investimento": 9991.97, "porcentagem_investimento": 0.011546324815847874, "impactos": 1244802, "porcentagem_impactos": 0.02676164858112001, "cpm": 8.026955290881602},
+    {"campanha": "campanha_investimentos_2025", "canal": "Mídias Orgânicas", "Investimento": 0, "porcentagem_investimento": 0, "impactos": 27048, "porcentagem_impactos": 0.0005814973552598197, "cpm": 0},
+    
+    # campanha_credito_rural_2025
+    {"campanha": "campanha_credito_rural_2025", "canal": "Rádio", "Investimento": 81828.69, "porcentagem_investimento": 0.11, "impactos": 3774956, "porcentagem_impactos": 0.1097, "cpm": 21.68},
+    {"campanha": "campanha_credito_rural_2025", "canal": "Painel de LED", "Investimento": 43480.17, "porcentagem_investimento": 0.06, "impactos": 204739, "porcentagem_impactos": 0.006, "cpm": 212.37},
+    {"campanha": "campanha_credito_rural_2025", "canal": "Revista", "Investimento": 7500, "porcentagem_investimento": 0.01, "impactos": 125000, "porcentagem_impactos": 0.0036, "cpm": 60},
+    {"campanha": "campanha_credito_rural_2025", "canal": "TV", "Investimento": 491273.16, "porcentagem_investimento": 0.65, "impactos": 28732072, "porcentagem_impactos": 0.8353, "cpm": 17.1},
+    {"campanha": "campanha_credito_rural_2025", "canal": "Meta Ads", "Investimento": 9177.95, "porcentagem_investimento": 0.01, "impactos": 1133576, "porcentagem_impactos": 0.033, "cpm": 8.1},
+    {"campanha": "campanha_credito_rural_2025", "canal": "Google Ads", "Investimento": 5548.54, "porcentagem_investimento": 0.01, "impactos": 413067, "porcentagem_impactos": 0.012, "cpm": 13.43},
+    {"campanha": "campanha_credito_rural_2025", "canal": "Mídias Orgânicas", "Investimento": 0, "porcentagem_investimento": 0, "impactos": 13391, "porcentagem_impactos": 0.0004, "cpm": 0},
+    
+    # campanha_credito_2025
+    {"campanha": "campanha_credito_2025", "canal": "Rádio", "Investimento": 38262.5, "porcentagem_investimento": 0.06922708611945404, "impactos": 2144860, "porcentagem_impactos": 0.09801629936945129, "cpm": 17.84},
+    {"campanha": "campanha_credito_2025", "canal": "Painel de LED", "Investimento": 58160, "porcentagem_investimento": 0.10522698016876698, "impactos": 2197139, "porcentagem_impactos": 0.10040535698381099, "cpm": 26.47},
+    {"campanha": "campanha_credito_2025", "canal": "Revista", "Investimento": 7500, "porcentagem_investimento": 0.013569503976371258, "impactos": 125000, "porcentagem_impactos": 0.005712278387018925, "cpm": 60},
+    {"campanha": "campanha_credito_2025", "canal": "TV", "Investimento": 435592.33, "porcentagem_investimento": 0.7881029138682428, "impactos": 16452414, "porcentagem_impactos": 0.7518461512519007, "cpm": 26.48},
+    {"campanha": "campanha_credito_2025", "canal": "Meta Ads", "Investimento": 8288.83, "porcentagem_investimento": 0.01499670821926205, "impactos": 632210, "porcentagem_impactos": 0.028890876152457876, "cpm": 13.11},
+    {"campanha": "campanha_credito_2025", "canal": "Google Ads", "Investimento": 4906.3, "porcentagem_investimento": 0.008876807647902708, "impactos": 331064, "porcentagem_impactos": 0.015129037855360267, "cpm": 14.82},
+    {"campanha": "campanha_credito_2025", "canal": "Mídias Orgânicas", "Investimento": 0, "porcentagem_investimento": 0, "impactos": 0, "porcentagem_impactos": 0, "cpm": 0},
+
+      # NOVA CAMPANHA: FENASUCRO 2025 (convertida)
+    {"campanha": "Fenasucro_2025", "canal": "Rádio", "Investimento": 7134.66, "porcentagem_investimento": 0.15, "impactos": 279177, "porcentagem_impactos": 0.0572, "cpm": 5.72},
+    {"campanha": "Fenasucro_2025", "canal": "TV + GloboPlay + G1", "Investimento": 39367.69, "porcentagem_investimento": 0.82, "impactos": 4523334, "porcentagem_impactos": 0.926, "cpm": 92.60},
+    {"campanha": "Fenasucro_2025", "canal": "Meta Ads", "Investimento": 449.70, "porcentagem_investimento": 0.01, "impactos": 44924, "porcentagem_impactos": 0.0092, "cpm": 0.92},
+    {"campanha": "Fenasucro_2025", "canal": "Mídias Orgânicas", "Investimento": 0, "porcentagem_investimento": 0, "impactos": 37427, "porcentagem_impactos": 0.0077, "cpm": 0.77},
+    #{"campanha": "Fenasucro_2025", "canal": "Produção Spot", "Investimento": 990.00, "porcentagem_investimento": 0.02, "impactos": 0, "porcentagem_impactos": 0, "cpm": 0},
+        
+        # NOVA CAMPANHA: CIRCUITO CULTURAL 2025 (convertida)
+    {"campanha": "circuito_cultural_2025", "canal": "Rádio", "Investimento": 18594.60, "porcentagem_investimento": 0.35, "impactos": 0, "porcentagem_impactos": 0, "cpm": 0},
+    {"campanha": "circuito_cultural_2025", "canal": "Carro de som", "Investimento": 9300.00, "porcentagem_investimento": 0.18, "impactos": 0, "porcentagem_impactos": 0, "cpm": 0},
+    {"campanha": "circuito_cultural_2025", "canal": "Panfletagem", "Investimento": 5462.60, "porcentagem_investimento": 0.10, "impactos": 57000, "porcentagem_impactos": 0.0185, "cpm": 95.84},
+    {"campanha": "circuito_cultural_2025", "canal": "Outdoor", "Investimento": 4750.00, "porcentagem_investimento": 0.09, "impactos": 293244, "porcentagem_impactos": 0.095, "cpm": 16.20},
+    {"campanha": "circuito_cultural_2025", "canal": "Meta Ads", "Investimento": 5000.00, "porcentagem_investimento": 0.09, "impactos": 2670280, "porcentagem_impactos": 0.8647, "cpm": 1.78},
+    {"campanha": "circuito_cultural_2025", "canal": "Social Orgânico", "Investimento": 0, "porcentagem_investimento": 0, "impactos": 67468, "porcentagem_impactos": 0.0218, "cpm": 0},
+    #{"campanha": "circuito_cultural_2025", "canal": "Produção", "Investimento": 9966.00, "porcentagem_investimento": 0.19, "impactos": 0, "porcentagem_impactos": 0, "cpm": 0},
+]
+
+# Criar DataFrame (AGORA ANTES DE USAR NA SIDEBAR)
+df = pd.DataFrame(data)
 
 # ============================================
 # CONFIGURAÇÕES DA MARCA COCRED - NOVA PALETA
@@ -241,7 +335,7 @@ THEME = get_current_theme()
 # Configuração da página Cocred Agrícola
 st.set_page_config(
     page_title="Dashboard de Campanhas - COCRED",
-    #page_icon="🌾",
+    page_icon="📊",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -414,6 +508,7 @@ st.markdown(f"""
         color: white !important;
         border: 2px solid rgba(255, 255, 255, 0.4) !important;
     }}
+    
 </style>
 """, unsafe_allow_html=True)
 
@@ -454,77 +549,6 @@ st.markdown(f"""
 <div style="height: 4px; background: linear-gradient(90deg, {COCRED_COLORS['verde_claro']}, {COCRED_COLORS['turquesa']}, {COCRED_COLORS['verde_escuro']}); 
             border-radius: 2px; margin: 20px 0;"></div>
 """, unsafe_allow_html=True)
-
-# ============================================
-# SIDEBAR COM INFORMAÇÕES DO USUÁRIO E LOGOUT
-# ============================================
-with st.sidebar:
-    # Informações do usuário
-    st.markdown(f"""
-        <div style="text-align: center; margin-bottom: 20px;">
-            <div style="font-size: 50px; color: white;"></div>
-            <h3 style="color: white; margin-bottom: 5px; text-align: center;">COCRED Dashboard</h3>
-            <div style="background: rgba(255, 255, 255, 0.2); padding: 10px; border-radius: 10px; margin: 10px 0;">
-                <p style="margin: 0; font-weight: bold;">👤 {st.session_state['username'].capitalize()}</p>
-                <p style="margin: 0; font-size: 12px; opacity: 0.8;">Usuário logado</p>
-            </div>
-        </div>
-    """, unsafe_allow_html=True)
-    
-    st.markdown("<div style='margin-top: 30px;'></div>", unsafe_allow_html=True)
-    
-    # Botão de logout com contêiner para estilo personalizado
-    logout_container = st.container()
-    with logout_container:
-        if st.button("🚪 Sair do Sistema", 
-                    type="secondary", 
-                    use_container_width=True,
-                    help="Clique para sair do sistema"):
-            st.session_state["logged_in"] = False
-            st.session_state["username"] = ""
-            st.rerun()
-    
-    # Espaçamento após o botão
-    st.markdown("<div style='margin-top: 20px;'></div>", unsafe_allow_html=True)
-    
-    # Separador visual
-    st.markdown("<hr style='border-color: rgba(255,255,255,0.2); margin: 20px 0;'>", unsafe_allow_html=True)
-
-# ============================================
-# DADOS DAS CAMPANHAS
-# ============================================
-data = [
-    # campanha_investimentos_2025
-    {"campanha": "campanha_investimentos_2025", "canal": "Rádio*", "Investimento": 130279.37, "porcentagem_investimento": 0.15054568046381514, "impactos": 5270645, "porcentagem_impactos": 0.11331211653406507, "cpm": 24.71791782599663},
-    {"campanha": "campanha_investimentos_2025", "canal": "Painel de LED*", "Investimento": 6117.2, "porcentagem_investimento": 0.007068794057979019, "impactos": 56398, "porcentagem_impactos": 0.0012124847619766085, "cpm": 108.46483917869428},
-    {"campanha": "campanha_investimentos_2025", "canal": "Revista*", "Investimento": 7500, "porcentagem_investimento": 0.008666702974374328, "impactos": 125000, "porcentagem_impactos": 0.0026873398923202255, "cpm": 60},
-    {"campanha": "campanha_investimentos_2025", "canal": "TV*", "Investimento": 580123.84, "porcentagem_investimento": 0.6703681346177942, "impactos": 33760901, "porcentagem_impactos": 0.7258161284637903, "cpm": 17.183304438468628},
-    {"campanha": "campanha_investimentos_2025", "canal": "Meta Ads", "Investimento": 10936.25, "porcentagem_investimento": 0.0126374973871335, "impactos": 5410725, "porcentagem_impactos": 0.11632365711099481, "cpm": 2.021217119702073},
-    {"campanha": "campanha_investimentos_2025", "canal": "Google Ads", "Investimento": 4932.36, "porcentagem_investimento": 0.005699639877691328, "impactos": 618880, "porcentagem_impactos": 0.013305127300473129, "cpm": 7.969816442605998},
-    {"campanha": "campanha_investimentos_2025", "canal": "Linkedin", "Investimento": 9991.97, "porcentagem_investimento": 0.011546324815847874, "impactos": 1244802, "porcentagem_impactos": 0.02676164858112001, "cpm": 8.026955290881602},
-    {"campanha": "campanha_investimentos_2025", "canal": "Mídias Orgânicas", "Investimento": 0, "porcentagem_investimento": 0, "impactos": 27048, "porcentagem_impactos": 0.0005814973552598197, "cpm": 0},
-    
-    # campanha_credito_rural_2025
-    {"campanha": "campanha_credito_rural_2025", "canal": "Rádio*", "Investimento": 81828.69, "porcentagem_investimento": 0.11, "impactos": 3774956, "porcentagem_impactos": 0.1097, "cpm": 21.68},
-    {"campanha": "campanha_credito_rural_2025", "canal": "Painel de LED*", "Investimento": 43480.17, "porcentagem_investimento": 0.06, "impactos": 204739, "porcentagem_impactos": 0.006, "cpm": 212.37},
-    {"campanha": "campanha_credito_rural_2025", "canal": "Revista*", "Investimento": 7500, "porcentagem_investimento": 0.01, "impactos": 125000, "porcentagem_impactos": 0.0036, "cpm": 60},
-    {"campanha": "campanha_credito_rural_2025", "canal": "TV*", "Investimento": 491273.16, "porcentagem_investimento": 0.65, "impactos": 28732072, "porcentagem_impactos": 0.8353, "cpm": 17.1},
-    {"campanha": "campanha_credito_rural_2025", "canal": "Meta Ads", "Investimento": 9177.95, "porcentagem_investimento": 0.01, "impactos": 1133576, "porcentagem_impactos": 0.033, "cpm": 8.1},
-    {"campanha": "campanha_credito_rural_2025", "canal": "Google Ads", "Investimento": 5548.54, "porcentagem_investimento": 0.01, "impactos": 413067, "porcentagem_impactos": 0.012, "cpm": 13.43},
-    {"campanha": "campanha_credito_rural_2025", "canal": "Mídias Orgânicas", "Investimento": 0, "porcentagem_investimento": 0, "impactos": 13391, "porcentagem_impactos": 0.0004, "cpm": 0},
-    
-    # campanha_credito_2025
-    {"campanha": "campanha_credito_2025", "canal": "Rádio*", "Investimento": 38262.5, "porcentagem_investimento": 0.06922708611945404, "impactos": 2144860, "porcentagem_impactos": 0.09801629936945129, "cpm": 17.84},
-    {"campanha": "campanha_credito_2025", "canal": "Painel de LED*", "Investimento": 58160, "porcentagem_investimento": 0.10522698016876698, "impactos": 2197139, "porcentagem_impactos": 0.10040535698381099, "cpm": 26.47},
-    {"campanha": "campanha_credito_2025", "canal": "Revista*", "Investimento": 7500, "porcentagem_investimento": 0.013569503976371258, "impactos": 125000, "porcentagem_impactos": 0.005712278387018925, "cpm": 60},
-    {"campanha": "campanha_credito_2025", "canal": "TV*", "Investimento": 435592.33, "porcentagem_investimento": 0.7881029138682428, "impactos": 16452414, "porcentagem_impactos": 0.7518461512519007, "cpm": 26.48},
-    {"campanha": "campanha_credito_2025", "canal": "Meta Ads", "Investimento": 8288.83, "porcentagem_investimento": 0.01499670821926205, "impactos": 632210, "porcentagem_impactos": 0.028890876152457876, "cpm": 13.11},
-    {"campanha": "campanha_credito_2025", "canal": "Google Ads", "Investimento": 4906.3, "porcentagem_investimento": 0.008876807647902708, "impactos": 331064, "porcentagem_impactos": 0.015129037855360267, "cpm": 14.82},
-    {"campanha": "campanha_credito_2025", "canal": "Mídias Orgânicas", "Investimento": 0, "porcentagem_investimento": 0, "impactos": 0, "porcentagem_impactos": 0, "cpm": 0},
-]
-
-# Criar DataFrame
-df = pd.DataFrame(data)
 
 # ============================================
 # FUNÇÃO DE AGREGAÇÃO PARA "TODAS AS CAMPANHAS"
@@ -609,16 +633,76 @@ def calcular_metricas_por_campanha(df_filtrado):
     return df_campanhas
 
 # ============================================
-# SIDEBAR - FILTROS
+# SIDEBAR COM INFORMAÇÕES DO USUÁRIO E LOGOUT
 # ============================================
 with st.sidebar:
+    # Informações do usuário
+    st.markdown(f"""
+        <div style="text-align: center; margin-bottom: 30px;">
+            <div style="margin-bottom: 20px;">
+                <h3 style="
+                    color: white;
+                    margin: 0;
+                    padding: 12px 18px;
+                    font-size: 22px;
+                    font-weight: 700;
+                    letter-spacing: 1px;
+                    border: 2px solid {COCRED_COLORS['turquesa']};
+                    border-radius: 8px;
+                    background: rgba(255, 255, 255, 0.1);
+                    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+                    display: inline-block;
+                    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+                ">
+                    COCRED Dashboard
+                </h3>
+                <p style="
+                    color: rgba(255,255,255,0.8);
+                    font-size: 14px;
+                    margin-top: 10px;
+                    margin-bottom: 0;
+                    font-weight: 400;
+                    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+                ">
+                    Análise de Campanhas
+                </p>
+            </div>
+            <div style="background: rgba(255, 255, 255, 0.1); padding: 10px; border-radius: 8px; margin: 10px 0; border: 1px solid rgba(255,255,255,0.2);">
+                <p style="margin: 0; font-weight: 600; font-size: 14px;">👤 {st.session_state['username'].capitalize()}</p>
+                <p style="margin: 0; font-size: 11px; opacity: 0.7; margin-top: 3px;">Usuário logado</p>
+            </div>
+        </div>
+    """, unsafe_allow_html=True)
+    
+    st.markdown("<div style='margin-top: 30px;'></div>", unsafe_allow_html=True)
+    
+    # Botão de logout
+    if st.button("🚪 Sair do Sistema", 
+                type="secondary", 
+                use_container_width=True,
+                help="Clique para sair do sistema"):
+        st.session_state["logged_in"] = False
+        st.session_state["username"] = ""
+        st.rerun()
+    
+    # Espaçamento após o botão
+    st.markdown("<div style='margin-top: 20px;'></div>", unsafe_allow_html=True)
+    
+    # Separador visual
+    st.markdown("<hr style='border-color: rgba(255,255,255,0.2); margin: 20px 0;'>", unsafe_allow_html=True)
+    
+    # ============================================
+    # SIDEBAR - FILTROS
+    # ============================================
     st.markdown("### 🔍 Filtros de Análise")
     
     # Ordem personalizada das campanhas (como você especificou)
     ordem_campanhas = [
         'campanha_credito_2025',
         'campanha_credito_rural_2025', 
-        'campanha_investimentos_2025'
+        'campanha_investimentos_2025',
+        'Fenasucro_2025',              # NOVA
+        'circuito_cultural_2025'       # NOVA
     ]
     
     # Verificar quais campanhas realmente existem nos dados
@@ -884,15 +968,21 @@ with tabs[0]:
     col1, col2 = st.columns(2)
     with col1:
         if not df_filtrado.empty:
-            df_invest = df_filtrado.sort_values('Investimento', ascending=False)
+            df_invest = df_filtrado.sort_values('Investimento', ascending=True)
             fig_invest = go.Figure()
             fig_invest.add_trace(go.Bar(
-                x=df_invest['canal'], y=df_invest['Investimento'], name='Investimento',
-                marker_color=CORES_GRAFICOS[0], marker_line_color=COCRED_COLORS['cinza_escuro'], marker_line_width=2,
-                text=df_invest['Investimento'].apply(lambda x: f'R$ {x:,.0f}'), textposition='outside',
+                y=df_invest['canal'],  # CANAL no eixo Y (vertical)
+                x=df_invest['Investimento'],  # INVESTIMENTO no eixo X (horizontal)
+                name='Investimento',
+                orientation='h',  # ORIENTAÇÃO HORIZONTAL
+                marker_color=CORES_GRAFICOS[0], 
+                marker_line_color=COCRED_COLORS['cinza_escuro'], 
+                marker_line_width=2,
+                text=df_invest['Investimento'].apply(lambda x: f'R$ {x:,.0f}'), 
+                textposition='outside',
                 textfont=dict(size=12, color=COCRED_COLORS['cinza_escuro'], family='Segoe UI'),
-                hovertemplate='<b>%{x}</b><br>' +
-                              'Investimento: R$ %{y:,.2f}<br>' +
+                hovertemplate='<b>%{y}</b><br>' +
+                              'Investimento: R$ %{x:,.2f}<br>' +
                               '% do total: %{customdata:.1%}<br>' +
                               'Campanha: ' + ('Todas' if campanha_selecionada == 'Todas as Campanhas' else campanha_selecionada) +
                               '<extra></extra>',
@@ -904,23 +994,38 @@ with tabs[0]:
                     font=dict(size=20, color=COCRED_COLORS['verde_escuro'], family='Segoe UI'),
                     x=0.5, y=0.98, xanchor='center', yanchor='top', pad=dict(t=10, b=10)
                 ),
-                xaxis=dict(title=dict(text='Canal'), tickangle=45),
-                yaxis=dict(title=dict(text='Investimento (R$)'), gridcolor='rgba(0,0,0,0.1)'),
-                plot_bgcolor='white', paper_bgcolor='white', hovermode='x unified',
-                height=500, margin=dict(t=80, b=120, l=80, r=40)
+                yaxis=dict(
+                    title=dict(text='Canal'), 
+                    tickfont=dict(size=12, color=COCRED_COLORS['cinza_escuro'])
+                ),
+                xaxis=dict(
+                    title=dict(text='Investimento (R$)'), 
+                    gridcolor='rgba(0,0,0,0.1)',
+                    tickfont=dict(size=12, color=COCRED_COLORS['cinza_escuro'])
+                ),
+                plot_bgcolor='white', 
+                paper_bgcolor='white', 
+                hovermode='y unified',
+                height=500, 
+                margin=dict(t=80, b=80, l=200, r=40)
             )
             st.plotly_chart(fig_invest, use_container_width=True)
     with col2:
         if not df_filtrado.empty:
-            df_impactos = df_filtrado.sort_values('impactos', ascending=False)
+            df_impactos = df_filtrado.sort_values('impactos', ascending=True)
             fig_impactos = go.Figure()
             fig_impactos.add_trace(go.Bar(
-                x=df_impactos['canal'], y=df_impactos['impactos'], name='Impactos',
-                marker_color=CORES_GRAFICOS[1], marker_line_color=COCRED_COLORS['cinza_escuro'], marker_line_width=2,
+                y=df_impactos['canal'],  # CANAL no eixo Y (vertical)
+                x=df_impactos['impactos'],  # IMPACTOS no eixo X (horizontal)
+                name='Impactos',
+                orientation='h',  # ORIENTAÇÃO HORIZONTAL
+                marker_color=CORES_GRAFICOS[1], 
+                marker_line_color=COCRED_COLORS['cinza_escuro'], 
+                marker_line_width=2,
                 text=df_impactos['impactos'].apply(lambda x: f'{x/1000000:.1f}M' if x > 1000000 else f'{x/1000:.0f}K'),
                 textposition='outside',
                 textfont=dict(size=12, color=COCRED_COLORS['cinza_escuro'], family='Segoe UI'),
-                hovertemplate='<b>%{x}</b><br>Impactos: %{y:,}<br>% do total: %{customdata:.1%}<br>' +
+                hovertemplate='<b>%{y}</b><br>Impactos: %{x:,}<br>% do total: %{customdata:.1%}<br>' +
                               'Campanha: ' + ('Todas' if campanha_selecionada == 'Todas as Campanhas' else campanha_selecionada) +
                               '<extra></extra>',
                 customdata=df_impactos['porcentagem_impactos']
@@ -931,10 +1036,20 @@ with tabs[0]:
                     font=dict(size=20, color=COCRED_COLORS['verde_escuro'], family='Segoe UI'),
                     x=0.5, y=0.95, xanchor='center', yanchor='top'
                 ),
-                xaxis=dict(title=dict(text='Canal'), tickangle=45),
-                yaxis=dict(title=dict(text='Número de Impactos'), gridcolor='rgba(0,0,0,0.1)'),
-                plot_bgcolor='white', paper_bgcolor='white', hovermode='x unified',
-                height=500, margin=dict(t=80, b=120, l=80, r=40)
+                yaxis=dict(
+                    title=dict(text='Canal'), 
+                    tickfont=dict(size=12, color=COCRED_COLORS['cinza_escuro'])
+                ),
+                xaxis=dict(
+                    title=dict(text='Número de Impactos'), 
+                    gridcolor='rgba(0,0,0,0.1)',
+                    tickfont=dict(size=12, color=COCRED_COLORS['cinza_escuro'])
+                ),
+                plot_bgcolor='white', 
+                paper_bgcolor='white', 
+                hovermode='y unified',
+                height=500, 
+                margin=dict(t=80, b=80, l=200, r=40)
             )
             st.plotly_chart(fig_impactos, use_container_width=True)
 
@@ -1357,7 +1472,6 @@ with tabs[4]:
             use_container_width=True
         )
 
-# ---------------- TAB 6: Comparação entre Campanhas (APENAS quando "Todas as Campanhas" está selecionada) ----------------
 # ---------------- TAB 6: Comparação entre Campanhas (APENAS quando "Todas as Campanhas" está selecionada) ----------------
 if campanha_selecionada == 'Todas as Campanhas' and len(tabs) > 5:
     with tabs[5]:
