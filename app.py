@@ -25,7 +25,7 @@ def show_login():
     
     # Configuração da página de login
     st.set_page_config(
-        page_title="Login - Cocred Dashboard - Id.",
+        page_title="Login - Cocred Dashboard",
         page_icon="🔐",
         layout="centered"
     )
@@ -272,10 +272,290 @@ data = [
     {"campanha": "circuito_cultural_2025", "canal": "Meta Ads", "Investimento": 5000.00, "porcentagem_investimento": 0.09, "impactos": 2670280, "porcentagem_impactos": 0.8647, "cpm": 1.78},
     {"campanha": "circuito_cultural_2025", "canal": "Social Orgânico", "Investimento": 0, "porcentagem_investimento": 0, "impactos": 67468, "porcentagem_impactos": 0.0218, "cpm": 0},
     #{"campanha": "circuito_cultural_2025", "canal": "Produção", "Investimento": 9966.00, "porcentagem_investimento": 0.19, "impactos": 0, "porcentagem_impactos": 0, "cpm": 0},
-]
 
+    # =========================
+    # CORRIDA SERRANA 2025
+    # =========================
+    {
+        "campanha": "corrida_serrana_2025",
+        "canal": "Meta Ads",
+        "Investimento": 15999.99,
+        "porcentagem_investimento": None,
+        "impactos": 3281374,
+        "porcentagem_impactos": None,
+        "cpm": 4.88
+    },
+
+    # =========================
+    # EXPOZEBU 2025
+    # =========================
+    {
+        "campanha": "expozebu_2025",
+        "canal": "Meta Ads",
+        "Investimento": 1999.99,
+        "porcentagem_investimento": None,
+        "impactos": 473021,
+        "porcentagem_impactos": None,
+        "cpm": 2.54
+    },
+
+    # =========================
+    # AGRISHOW 2025
+    # =========================
+    {
+        "campanha": "agrishow_2025",
+        "canal": "Meta Ads",
+        "Investimento": 999.88,
+        "porcentagem_investimento": None,
+        "impactos": 301690,
+        "porcentagem_impactos": None,
+        "cpm": 3.61
+    },
+
+    # =========================
+    # OPEN FINANCE 2025
+    # =========================
+    {
+        "campanha": "open_finance_2025",
+        "canal": "Meta Ads",
+        "Investimento": 1799.93,
+        "porcentagem_investimento": None,
+        "impactos": 293589,
+        "porcentagem_impactos": None,
+        "cpm": 2.24
+    },
+
+    # =========================
+    # INSTITUCIONAL SANTA ROSA 2025
+    # =========================
+    {
+        "campanha": "institucional_santa_rosa_2025",
+        "canal": "Meta Ads",
+        "Investimento": 799.94,
+        "porcentagem_investimento": None,
+        "impactos": 282804,
+        "porcentagem_impactos": None,
+        "cpm": 2.83
+    },
+
+    # =========================
+    # SIPAG 2025
+    # =========================
+    {
+        "campanha": "sipag_2025",
+        "canal": "Meta Ads",
+        "Investimento": 5500.00,
+        "porcentagem_investimento": 0.8378,
+        "impactos": 279983,
+        "porcentagem_impactos": 0.9762,
+        "cpm": 19.64
+    },
+    {
+        "campanha": "sipag_2025",
+        "canal": "Google Ads",
+        "Investimento": 1064.50,
+        "porcentagem_investimento": 0.1622,
+        "impactos": 6828,
+        "porcentagem_impactos": 0.0238,
+        "cpm": 155.90
+    },
+
+    # =========================
+    # DIA DOS NAMORADOS 2025
+    # =========================
+    {
+        "campanha": "dia_dos_namorados_2025",
+        "canal": "Meta Ads",
+        "Investimento": 349.89,
+        "porcentagem_investimento": None,
+        "impactos": 210580,
+        "porcentagem_impactos": None,
+        "cpm": 1.66
+    },
+
+    # =========================
+    # GREEN WEEK 2025
+    # =========================
+    {
+        "campanha": "green_week_2025",
+        "canal": "Meta Ads",
+        "Investimento": 4255.07,
+        "porcentagem_investimento": None,
+        "impactos": 163076,
+        "porcentagem_impactos": None,
+        "cpm": 26.09
+    },
+
+    # =========================
+    # INVESTCAP 2025
+    # =========================
+    {
+        "campanha": "investcap_2025",
+        "canal": "Meta Ads",
+        "Investimento": 2396.28,
+        "porcentagem_investimento": None,
+        "impactos": 147535,
+        "porcentagem_impactos": None,
+        "cpm": 16.24
+    },
+
+    # =========================
+    # FORMATURA SANTA ROSA 2025
+    # =========================
+    {
+        "campanha": "form_santa_rosa_2025",
+        "canal": "Meta Ads",
+        "Investimento": 1178.63,
+        "porcentagem_investimento": None,
+        "impactos": 106523,
+        "porcentagem_impactos": None,
+        "cpm": 11.06
+    },
+
+    # =========================
+    # SEGURO DE VIDA 2025
+    # =========================
+    {
+        "campanha": "seguro_de_vida_2025",
+        "canal": "Meta Ads",
+        "Investimento": 1867.92,
+        "porcentagem_investimento": None,
+        "impactos": 81487,
+        "porcentagem_impactos": None,
+        "cpm": 22.92
+    },
+
+    # =========================
+    # CONSÓRCIO 2025
+    # =========================
+    {
+        "campanha": "consorcio_2025",
+        "canal": "Meta Ads",
+        "Investimento": 1933.79,
+        "porcentagem_investimento": None,
+        "impactos": 74044,
+        "porcentagem_impactos": None,
+        "cpm": 26.12
+    },
+
+    # =========================
+    # FEMEC 2025
+    # =========================
+    {
+        "campanha": "femec_2025",
+        "canal": "Meta Ads",
+        "Investimento": 1095.21,
+        "porcentagem_investimento": None,
+        "impactos": 65847,
+        "porcentagem_impactos": None,
+        "cpm": 16.63
+    },
+
+    # =========================
+    # CAPITAL DE GIRO
+    # =========================
+    {
+        "campanha": "capital_de_giro",
+        "canal": "Meta Ads",
+        "Investimento": 1727.29,
+        "porcentagem_investimento": None,
+        "impactos": 57185,
+        "porcentagem_impactos": None,
+        "cpm": 30.21
+    },
+
+    # =========================
+    # CRÉDITO PESSOAL FÉRIAS
+    # =========================
+    {
+        "campanha": "credito_pessoal_ferias",
+        "canal": "Meta Ads",
+        "Investimento": 1720.00,
+        "porcentagem_investimento": None,
+        "impactos": 52389,
+        "porcentagem_impactos": None,
+        "cpm": 32.82
+    }
+]   
 # Criar DataFrame (AGORA ANTES DE USAR NA SIDEBAR)
 df = pd.DataFrame(data)
+
+# ============================================
+# DADOS DETALHADOS DAS EMPRESAS/EMISSORAS
+# ============================================
+dados_detalhados = [
+    # RÁDIO - Campanha Crédito Rural
+    {"Campanha": "campanha_credito_rural_2025", "Canal": "Rádio", "Empresa/Emissora": "Rádio 106 FM (Ribeirão Preto)", "Inserções": 100, "Ouvintes/min": 3397, "Impacto": 339700, "CPM": 15.16},
+    {"Campanha": "campanha_credito_rural_2025", "Canal": "Rádio", "Empresa/Emissora": "Rádio Conquista (Ribeirão Preto)", "Inserções": 100, "Ouvintes/min": 4390, "Impacto": 439000, "CPM": 17.08},
+    {"Campanha": "campanha_credito_rural_2025", "Canal": "Rádio", "Empresa/Emissora": "Rádio Nova Brasil (Ribeirão Preto)", "Inserções": 100, "Ouvintes/min": 3000, "Impacto": 300000, "CPM": 15.96},
+    {"Campanha": "campanha_credito_rural_2025", "Canal": "Rádio", "Empresa/Emissora": "Rádio Clube (Ribeirão Preto)", "Inserções": 100, "Ouvintes/min": 7468, "Impacto": 746800, "CPM": 9.24},
+    {"Campanha": "campanha_credito_rural_2025", "Canal": "Rádio", "Empresa/Emissora": "Rádio CBN – Patrocínio Giro do Agro (Ribeirão Preto)", "Inserções": 16, "Ouvintes/min": 2552, "Impacto": 40830, "CPM": 147.86},
+    {"Campanha": "campanha_credito_rural_2025", "Canal": "Rádio", "Empresa/Emissora": "Rádio Nativa (São Carlos)", "Inserções": 125, "Ouvintes/min": 1526, "Impacto": 190750, "CPM": 24.91},
+    {"Campanha": "campanha_credito_rural_2025", "Canal": "Rádio", "Empresa/Emissora": "Rádio Diário (São José do Rio Preto)", "Inserções": 125, "Ouvintes/min": 2896, "Impacto": 362000, "CPM": 21.75},
+    {"Campanha": "campanha_credito_rural_2025", "Canal": "Rádio", "Empresa/Emissora": "Rádio 101,3 Top FM (Bauru)", "Inserções": 124, "Ouvintes/min": 2274, "Impacto": 281976, "CPM": 29.68},
+    {"Campanha": "campanha_credito_rural_2025", "Canal": "Rádio", "Empresa/Emissora": "Rádio Jovem Pan (Marília) - Contrato", "Inserções": 16, "Ouvintes/min": 1425, "Impacto": 22800, "CPM": 118.42},
+    {"Campanha": "campanha_credito_rural_2025", "Canal": "Rádio", "Empresa/Emissora": "Rádio Nativa (Marília) - Contrato", "Inserções": 40, "Ouvintes/min": 1425, "Impacto": 57000, "CPM": 120.57},
+    {"Campanha": "campanha_credito_rural_2025", "Canal": "Rádio", "Empresa/Emissora": "Rádio Paranaíba (Uberlândia)", "Inserções": 125, "Ouvintes/min": 4279, "Impacto": 534875, "CPM": 21.08},
+    {"Campanha": "campanha_credito_rural_2025", "Canal": "Rádio", "Empresa/Emissora": "Rádio Supersom (Uberaba)", "Inserções": 125, "Ouvintes/min": 2041, "Impacto": 255125, "CPM": 16.12},
+    {"Campanha": "campanha_credito_rural_2025", "Canal": "Rádio", "Empresa/Emissora": "Rádio Zebu (Uberaba)", "Inserções": 100, "Ouvintes/min": 2041, "Impacto": 204100, "CPM": 26.92},
+    
+    # TV - Campanha Crédito Rural
+    {"Campanha": "campanha_credito_rural_2025", "Canal": "TV", "Empresa/Emissora": "EPTV Ribeirão", "Impactos": 7749000, "Inserções": 57, "CPM": 21.93},
+    {"Campanha": "campanha_credito_rural_2025", "Canal": "TV", "Empresa/Emissora": "EPTV São Carlos", "Impactos": 1927000, "Inserções": 25, "CPM": 11.68},
+    {"Campanha": "campanha_credito_rural_2025", "Canal": "TV", "Empresa/Emissora": "Globo News", "Impactos": 34280, "Inserções": 8, "CPM": 71.23},
+    {"Campanha": "campanha_credito_rural_2025", "Canal": "TV", "Empresa/Emissora": "TV TEM Bauru", "Impactos": 3603300, "Inserções": 40, "CPM": 17.95},
+    {"Campanha": "campanha_credito_rural_2025", "Canal": "TV", "Empresa/Emissora": "TV TEM São José do Rio Preto", "Impactos": 3048959, "Inserções": 40, "CPM": 24.83},
+    {"Campanha": "campanha_credito_rural_2025", "Canal": "TV", "Empresa/Emissora": "TV TEM São José do Rio Preto Patrocínio", "Impactos": 296363, "Inserções": 11, "CPM": 27.72},
+    {"Campanha": "campanha_credito_rural_2025", "Canal": "TV", "Empresa/Emissora": "TV Integração Uberlândia", "Impactos": 2093278, "Inserções": 30, "CPM": 16.90},
+    {"Campanha": "campanha_credito_rural_2025", "Canal": "TV", "Empresa/Emissora": "TV Integração Uberaba", "Impactos": 432414, "Inserções": 33, "CPM": 31.58},
+    {"Campanha": "campanha_credito_rural_2025", "Canal": "TV", "Empresa/Emissora": "TV Clube Ribeirão Preto", "Impactos": 2997113, "Inserções": 49, "CPM": 8.33},
+    {"Campanha": "campanha_credito_rural_2025", "Canal": "TV", "Empresa/Emissora": "TV Record Ribeirão Preto", "Impactos": 2895693, "Inserções": 36, "CPM": 7.59},
+    {"Campanha": "campanha_credito_rural_2025", "Canal": "TV", "Empresa/Emissora": "TV Paranaíba (Uberlândia e Uberaba)", "Impactos": 652980, "Inserções": 16, "CPM": 12.56},
+    {"Campanha": "campanha_credito_rural_2025", "Canal": "TV", "Empresa/Emissora": "TV Band Paulista (Bauru e Rio Preto)", "Impactos": 2242000, "Inserções": 41, "CPM": 12.37},
+    {"Campanha": "campanha_credito_rural_2025", "Canal": "TV", "Empresa/Emissora": "TV Band Triângulo (Uberlândia e Uberaba)", "Impactos": 425875, "Inserções": 15, "CPM": 8.85},
+    {"Campanha": "campanha_credito_rural_2025", "Canal": "TV", "Empresa/Emissora": "SBT TV Ribeirão Preto", "Impactos": 333817, "Inserções": 17, "CPM": 36.17},
+    
+    # PAINEL DE LED - Campanha Crédito Rural
+    {"Campanha": "campanha_credito_rural_2025", "Canal": "Painel de LED", "Cidade": "Ribeirão Preto (Painew, Inteligência de Mídia e Multiplan)", "Quantidade": 3, "Impacto Total": 1074000, "Impacto da Marca": 89500, "CPM da Marca": 251.12},
+    {"Campanha": "campanha_credito_rural_2025", "Canal": "Painel de LED", "Cidade": "Bauru (Inteligência de Mídia)", "Quantidade": 1, "Impacto Total": 375586, "Impacto da Marca": 31299, "CPM da Marca": 127.48},
+    {"Campanha": "campanha_credito_rural_2025", "Canal": "Painel de LED", "Cidade": "Uberaba (Inteligência de Mídia)", "Quantidade": 1, "Impacto Total": 294285, "Impacto da Marca": 24524, "CPM da Marca": 282.79},
+    {"Campanha": "campanha_credito_rural_2025", "Canal": "Painel de LED", "Cidade": "Uberlândia (Inteligência de Mídia)", "Quantidade": 1, "Impacto Total": 217794, "Impacto da Marca": 18150, "CPM da Marca": 193.67},
+    {"Campanha": "campanha_credito_rural_2025", "Canal": "Painel de LED", "Cidade": "Marília (Interior Outdoor)", "Quantidade": 1, "Impacto Total": 201200, "Impacto da Marca": 16767, "CPM da Marca": 98.41},
+    {"Campanha": "campanha_credito_rural_2025", "Canal": "Painel de LED", "Cidade": "São José do Rio Preto (J Silva)", "Quantidade": 1, "Impacto Total": 294000, "Impacto da Marca": 24500, "CPM da Marca": 200.62},
+
+    {"Campanha": "Campanha_Fim_ano_2025", "Canal": "TV", "Empresa/Emissora": "EPTV Ribeirão", "Impactos": 8005045, "Inserções": 54, "CPM": 31.95},
+    {"Campanha": "Campanha_Fim_ano_2025", "Canal": "TV", "Empresa/Emissora": "EPTV São Carlos", "Impactos": 2894361, "Inserções": 32, "CPM": 18.38},
+    {"Campanha": "Campanha_Fim_ano_2025", "Canal": "TV", "Empresa/Emissora": "Globo News/ Sportv", "Impactos": 239961, "Inserções": 56, "CPM": 57.22},
+    {"Campanha": "Campanha_Fim_ano_2025", "Canal": "TV", "Empresa/Emissora": "TV TEM Bauru", "Impactos": 4595200, "Inserções": 43, "CPM": 32.37},
+    {"Campanha": "Campanha_Fim_ano_2025", "Canal": "TV", "Empresa/Emissora": "TV TEM São José do Rio Preto", "Impactos": 4264032, "Inserções": 43, "CPM": 35.68},
+    {"Campanha": "Campanha_Fim_ano_2025", "Canal": "TV", "Empresa/Emissora": "TV TEM São José do Rio Preto Patrocínio", "Impactos": 592727, "Inserções": 8, "CPM": 41.33},
+    {"Campanha": "Campanha_Fim_ano_2025", "Canal": "TV", "Empresa/Emissora": "TV Integração Uberlândia", "Impactos": 1592940, "Inserções": 26, "CPM": 28.91},
+    {"Campanha": "Campanha_Fim_ano_2025", "Canal": "TV", "Empresa/Emissora": "TV Integração Uberaba", "Impactos": 324414, "Inserções": 26, "CPM": 44.93},
+    {"Campanha": "Campanha_Fim_ano_2025", "Canal": "TV", "Empresa/Emissora": "TV Clube Ribeirão Preto", "Impactos": 2530126, "Inserções": 51, "CPM": 15.94},
+    {"Campanha": "Campanha_Fim_ano_2025", "Canal": "TV", "Empresa/Emissora": "TV Record Ribeirão Preto", "Impactos": 3326966, "Inserções": 40, "CPM": 11.39},
+    {"Campanha": "Campanha_Fim_ano_2025", "Canal": "TV", "Empresa/Emissora": "TV Paranaíba (Uberlândia e Uberaba)", "Impactos": 1083489, "Inserções": 25, "CPM": 21.76},
+    {"Campanha": "Campanha_Fim_ano_2025", "Canal": "TV", "Empresa/Emissora": "TV Band Paulista (Bauru e Rio Preto)", "Impactos": 1843000, "Inserções": 32, "CPM": 16.46},
+    {"Campanha": "Campanha_Fim_ano_2025", "Canal": "TV", "Empresa/Emissora": "SBT TV Ribeirão Preto", "Impactos": 1104060, "Inserções": 30, "CPM": 23.76},
+    
+    {"Campanha": "Campanha_Fim_ano_2025", "Canal": "Elevador", "Empresa/Emissora": "Elevador Residencial - (Hello)", "Impactos": 1932444, "Inserções": 125, "CPM": 3.60},
+    {"Campanha": "Campanha_Fim_ano_2025", "Canal": "Shopping", "Empresa/Emissora": "Shopping Iguatemi - (Eletromídia)", "Impactos": 2129080, "Inserções": 32, "CPM": 7.80},
+    {"Campanha": "Campanha_Fim_ano_2025", "Canal": "Cinema", "Empresa/Emissora": "Cinema - (FIX Mídia)", "Impactos": 1177140, "Inserções": 2, "CPM": 76.46},
+    
+    {"Campanha": "Campanha_Fim_ano_2025", "Canal": "Mídia Exterior", "Empresa/Emissora": "Ribeirão Preto - (Painew, Inteligência de Mídia)", "Impactos": 266923, "Inserções": 3, "CPM": 251.12},
+    {"Campanha": "Campanha_Fim_ano_2025", "Canal": "Mídia Exterior", "Empresa/Emissora": "Bauru - (Inteligência de Mídia)", "Impactos": 8824, "Inserções": 1, "CPM": 475.97},
+    {"Campanha": "Campanha_Fim_ano_2025", "Canal": "Mídia Exterior", "Empresa/Emissora": "Uberaba - (Inteligência de Mídia)", "Impactos": 98095, "Inserções": 1, "CPM": 76.46},
+    {"Campanha": "Campanha_Fim_ano_2025", "Canal": "Mídia Exterior", "Empresa/Emissora": "Uberlândia - (Inteligência de Mídia)", "Impactos": 90748, "Inserções": 1, "CPM": 82.65},
+    {"Campanha": "Campanha_Fim_ano_2025", "Canal": "Mídia Exterior", "Empresa/Emissora": "Marília - (Interior Outdoor)", "Impactos": 18443, "Inserções": 1, "CPM": 67.10},
+    {"Campanha": "Campanha_Fim_ano_2025", "Canal": "Mídia Exterior", "Empresa/Emissora": "São José do Rio Preto - (J Silva)", "Impactos": 26950, "Inserções": 1, "CPM": 136.78},
+    {"Campanha": "Campanha_Fim_ano_2025", "Canal": "Mídia Exterior", "Empresa/Emissora": "São Carlos - (Inteligência de Mídia)", "Impactos": 10142, "Inserções": 1, "CPM": 443.70}
+
+
+
+
+]
+
+# Criar DataFrame para dados detalhados
+df_detalhado = pd.DataFrame(dados_detalhados)
 
 # ============================================
 # CONFIGURAÇÕES DA MARCA COCRED - NOVA PALETA
@@ -334,7 +614,7 @@ THEME = get_current_theme()
 
 # Configuração da página Cocred Agrícola
 st.set_page_config(
-    page_title="Dashboard de Campanhas - COCRED - Id.",
+    page_title="Dashboard de Campanhas - COCRED",
     page_icon="📊",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -702,7 +982,26 @@ with st.sidebar:
         'campanha_credito_rural_2025', 
         'campanha_investimentos_2025',
         'Fenasucro_2025',              # NOVA
-        'circuito_cultural_2025'       # NOVA
+        'circuito_cultural_2025',
+        'corrida_serrana_2025',
+        'expozebu_2025',
+        'agrishow_2025',
+        'femec_2025',
+
+    # Financeiro / Produtos
+        'open_finance_2025',
+        'institucional_santa_rosa_2025',
+        'sipag_2025',
+        'investcap_2025',
+        'capital_de_giro',
+        'credito_pessoal_ferias',
+        'consorcio_2025',
+        'seguro_de_vida_2025',
+
+    # Datas comemorativas / campanhas específicas
+        'dia_dos_namorados_2025',
+        'green_week_2025',
+        'form_santa_rosa_2025'# NOVA
     ]
     
     # Verificar quais campanhas realmente existem nos dados
@@ -937,7 +1236,7 @@ st.markdown(f"""
 # ============================================
 # Ajuste no número de tabs para incluir a nova aba de comparação
 tab_names = ["📊 Análise por Canal", "📈 Distribuição (Investimento)", "📈 Distribuição (Impacto)",
-             "💰 Eficiência (CPM)", "📋 Dados Detalhados"]
+             "💰 Eficiência (CPM)", "📋 Dados Detalhados", "🏢 Detalhes por Empresa/Emissora"]
 
 # Adiciona aba de comparação apenas se "Todas as Campanhas" estiver selecionada
 if campanha_selecionada == 'Todas as Campanhas':
@@ -1472,9 +1771,176 @@ with tabs[4]:
             use_container_width=True
         )
 
-# ---------------- TAB 6: Comparação entre Campanhas (APENAS quando "Todas as Campanhas" está selecionada) ----------------
-if campanha_selecionada == 'Todas as Campanhas' and len(tabs) > 5:
-    with tabs[5]:
+# ---------------- TAB 6: Detalhes por Empresa/Emissora ----------------
+with tabs[5]:
+    st.markdown(f"""
+    <h3 style="color: {COCRED_COLORS['verde_escuro']}; border-left: 6px solid {COCRED_COLORS['laranja']}; padding-left: 15px;">
+        🏢 Detalhamento por Empresa/Emissora
+    </h3>
+    """, unsafe_allow_html=True)
+    
+    st.markdown(f"""
+    <p style='color: {COCRED_COLORS['cinza_medio']}; font-size: 14px; margin-bottom: 20px;'>
+    Esta tabela detalha as empresas, emissoras e veículos específicos utilizados em cada canal de mídia.
+    Os dados são agrupados por campanha e canal para facilitar a análise de desempenho individual.
+    </p>
+    """, unsafe_allow_html=True)
+    
+    # Filtros específicos para esta tab
+    col_filtro1, col_filtro2 = st.columns(2)
+    
+    with col_filtro1:
+        campanhas_detalhadas = df_detalhado['Campanha'].unique()
+        campanha_filtro = st.selectbox(
+            "Selecione a Campanha:",
+            options=['Todas as Campanhas'] + list(campanhas_detalhadas),
+            index=0,
+            key="empresa_campanha_filter"
+        )
+    
+    with col_filtro2:
+        canais_detalhados = df_detalhado['Canal'].unique()
+        canal_filtro = st.multiselect(
+            "Filtrar por Canal:",
+            options=list(canais_detalhados),
+            default=[],
+            key="empresa_canal_filter"
+        )
+    
+    # Aplicar filtros
+    df_filtrado_empresas = df_detalhado.copy()
+    
+    if campanha_filtro != 'Todas as Campanhas':
+        df_filtrado_empresas = df_filtrado_empresas[df_filtrado_empresas['Campanha'] == campanha_filtro]
+    
+    if canal_filtro:
+        df_filtrado_empresas = df_filtrado_empresas[df_filtrado_empresas['Canal'].isin(canal_filtro)]
+    
+    # Mostrar diferentes formatos de tabela baseado no canal
+    st.markdown("---")
+    
+    if len(df_filtrado_empresas) > 0:
+        # Rádio
+        df_radio = df_filtrado_empresas[df_filtrado_empresas['Canal'] == 'Rádio']
+        if len(df_radio) > 0:
+            st.markdown(f"""
+            <h4 style="color: {COCRED_COLORS['verde_escuro']}; margin-top: 20px;">
+                📻 Rádio - Detalhamento por Emissora
+            </h4>
+            """, unsafe_allow_html=True)
+            
+            df_radio_display = df_radio[['Campanha', 'Empresa/Emissora', 'Inserções', 'Ouvintes/min', 'Impacto', 'CPM']].copy()
+            df_radio_display['CPM'] = df_radio_display['CPM'].apply(lambda x: f"R$ {x:,.2f}")
+            df_radio_display['Impacto'] = df_radio_display['Impacto'].apply(lambda x: f"{x:,}")
+            df_radio_display['Ouvintes/min'] = df_radio_display['Ouvintes/min'].apply(lambda x: f"{x:,}")
+            
+            st.dataframe(
+                df_radio_display,
+                use_container_width=True,
+                hide_index=True,
+                column_config={
+                    "Campanha": st.column_config.TextColumn("Campanha", width="medium"),
+                    "Empresa/Emissora": st.column_config.TextColumn("Emissora", width="large"),
+                    "Inserções": st.column_config.NumberColumn("Inserções", width="small", format="%d"),
+                    "Ouvintes/min": st.column_config.TextColumn("Ouvintes/min", width="small"),
+                    "Impacto": st.column_config.TextColumn("Impacto Total", width="medium"),
+                    "CPM": st.column_config.TextColumn("CPM", width="small")
+                }
+            )
+        
+        # TV
+        df_tv = df_filtrado_empresas[df_filtrado_empresas['Canal'] == 'TV']
+        if len(df_tv) > 0:
+            st.markdown(f"""
+            <h4 style="color: {COCRED_COLORS['verde_escuro']}; margin-top: 30px;">
+                📺 TV - Detalhamento por Emissora
+            </h4>
+            """, unsafe_allow_html=True)
+            
+            df_tv_display = df_tv[['Campanha', 'Empresa/Emissora', 'Impactos', 'Inserções', 'CPM']].copy()
+            df_tv_display['CPM'] = df_tv_display['CPM'].apply(lambda x: f"R$ {x:,.2f}")
+            df_tv_display['Impactos'] = df_tv_display['Impactos'].apply(lambda x: f"{x:,}")
+            
+            st.dataframe(
+                df_tv_display,
+                use_container_width=True,
+                hide_index=True,
+                column_config={
+                    "Campanha": st.column_config.TextColumn("Campanha", width="medium"),
+                    "Empresa/Emissora": st.column_config.TextColumn("Emissora", width="large"),
+                    "Impactos": st.column_config.TextColumn("Impactos", width="medium"),
+                    "Inserções": st.column_config.NumberColumn("Inserções", width="small", format="%d"),
+                    "CPM": st.column_config.TextColumn("CPM", width="small")
+                }
+            )
+        
+        # Painel de LED
+        df_led = df_filtrado_empresas[df_filtrado_empresas['Canal'] == 'Painel de LED']
+        if len(df_led) > 0:
+            st.markdown(f"""
+            <h4 style="color: {COCRED_COLORS['verde_escuro']}; margin-top: 30px;">
+                🚦 Painel de LED - Detalhamento por Cidade/Empresa
+            </h4>
+            """, unsafe_allow_html=True)
+            
+            df_led_display = df_led[['Campanha', 'Cidade', 'Quantidade', 'Impacto Total', 'Impacto da Marca', 'CPM da Marca']].copy()
+            df_led_display['CPM da Marca'] = df_led_display['CPM da Marca'].apply(lambda x: f"R$ {x:,.2f}")
+            df_led_display['Impacto Total'] = df_led_display['Impacto Total'].apply(lambda x: f"{x:,}")
+            df_led_display['Impacto da Marca'] = df_led_display['Impacto da Marca'].apply(lambda x: f"{x:,}")
+            
+            st.dataframe(
+                df_led_display,
+                use_container_width=True,
+                hide_index=True,
+                column_config={
+                    "Campanha": st.column_config.TextColumn("Campanha", width="medium"),
+                    "Cidade": st.column_config.TextColumn("Cidade/Empresa", width="large"),
+                    "Quantidade": st.column_config.NumberColumn("Quantidade", width="small", format="%d"),
+                    "Impacto Total": st.column_config.TextColumn("Impacto Total", width="medium"),
+                    "Impacto da Marca": st.column_config.TextColumn("Impacto da Marca", width="medium"),
+                    "CPM da Marca": st.column_config.TextColumn("CPM da Marca", width="small")
+                }
+            )
+        
+        # Botão de exportação
+        st.markdown("---")
+        col_btn1, col_btn2, col_btn3 = st.columns([1, 2, 1])
+        with col_btn2:
+            csv_empresas = df_filtrado_empresas.to_csv(index=False, encoding='utf-8-sig').encode('utf-8-sig')
+            st.download_button(
+                label="📥 Exportar Dados Detalhados para Excel (CSV)",
+                data=csv_empresas,
+                file_name=f"detalhes_empresas_cocred_{pd.Timestamp.now().strftime('%Y%m%d_%H%M')}.csv",
+                mime="text/csv",
+                use_container_width=True
+            )
+    else:
+        st.info("ℹ️ Não há dados detalhados disponíveis para os filtros selecionados.")
+    
+    # Estatísticas rápidas
+    if len(df_filtrado_empresas) > 0:
+        st.markdown("---")
+        st.markdown(f"""
+        <h4 style="color: {COCRED_COLORS['verde_escuro']}; margin-top: 20px;">
+            📊 Resumo dos Dados Detalhados
+        </h4>
+        """, unsafe_allow_html=True)
+        
+        total_empresas = len(df_filtrado_empresas)
+        total_canais = df_filtrado_empresas['Canal'].nunique()
+        total_campanhas = df_filtrado_empresas['Campanha'].nunique()
+        
+        col_stat1, col_stat2, col_stat3 = st.columns(3)
+        with col_stat1:
+            st.metric("🏢 Empresas/Emissoras", total_empresas)
+        with col_stat2:
+            st.metric("📡 Canais", total_canais)
+        with col_stat3:
+            st.metric("🎯 Campanhas", total_campanhas)
+
+# ---------------- TAB 7: Comparação entre Campanhas (APENAS quando "Todas as Campanhas" está selecionada) ----------------
+if campanha_selecionada == 'Todas as Campanhas' and len(tabs) > 6:
+    with tabs[6]:
         st.markdown(f"""
         <h3 style="color: {COCRED_COLORS['verde_escuro'] if not THEME['is_dark'] else THEME['text']}; border-left: 6px solid {COCRED_COLORS['roxo']}; padding-left: 15px;">
             🆚 Comparação entre Campanhas
