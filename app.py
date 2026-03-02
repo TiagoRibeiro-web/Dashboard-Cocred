@@ -334,7 +334,7 @@ THEME = get_current_theme()
 
 # Configuração da página Cocred Agrícola
 st.set_page_config(
-    page_title="Dashboard de Campanhas - COCRED",
+    page_title="Dashboard de Campanhas - COCRED - Id.",
     page_icon="📊",
     layout="wide",
     initial_sidebar_state="expanded"
