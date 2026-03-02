@@ -25,7 +25,7 @@ def show_login():
     
     # Configuração da página de login
     st.set_page_config(
-        page_title="Login - Cocred Dashboard",
+        page_title="Login - Cocred Dashboard - Id.",
         page_icon="🔐",
         layout="centered"
     )
